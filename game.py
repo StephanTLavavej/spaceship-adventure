@@ -306,3 +306,9 @@ main()
 #     from Cliff Edge to Canyon Floor
 # * Could implement items
 # * Could implement NPCs with dialogue
+# * Admiral Whiskers is not a true NPC yet - her location and name are hardcoded.
+# * Ideas for more Admiral Whiskers behaviors:
+#   + She could randomly choose to purr, flop, snooze, stretch, etc.
+#   + She could cycle through behaviors, by adding a variable like working_reactor.
+# * Nothing special happens if you attempt to fix the reactor repeatedly.
+# * The help text mentions the number of secret commands, but can get out of sync.
