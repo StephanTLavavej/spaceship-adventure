@@ -163,6 +163,11 @@ def take_turn():
             working_reactor = True
         else:
             print("There's no reactor here.")
+    elif player_command == "pet kitty":
+        if current_room_name == "Ready Room":
+            print("Admiral Whiskers purrs contentedly as you scritch between her ears.")
+        else:
+            print("There's no kitty here. Aw.")
     elif player_command == "fly ship":
         if current_room_name == "Bridge":
             if working_reactor:
