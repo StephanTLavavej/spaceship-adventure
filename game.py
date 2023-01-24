@@ -36,8 +36,9 @@ all_rooms = [
     Room(
         "Ready Room",
         "The senior officers get ready in this room, whatever that means. You "
-        "suspect that they play video games in here. An automatic door is ready "
-        "to serve you, to the west.",
+        "suspect that they play video games in here. The ship's cat, Admiral "
+        "Whiskers, is curled up on the conference table. It would be nice to "
+        "PET the KITTY. An automatic door is ready to serve you, to the west.",
         {"west": "Bright Hallway"},
     ),
     Room(
