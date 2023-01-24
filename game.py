@@ -141,7 +141,7 @@ def take_turn():
         print("     west - Wheat.")
         print("       up - Rockets go in this direction.")
         print("     down - Apples fall in this direction.")
-        print("verb noun - There are two SECRET COMMANDS of this form.")
+        print("verb noun - There are three SECRET COMMANDS of this form.")
     elif player_command == "quit":
         print("Ok, but quitters never win.")
         global playing_game
