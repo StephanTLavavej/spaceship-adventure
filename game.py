@@ -36,8 +36,9 @@ all_rooms = [
     Room(
         "Ready Room",
         "The senior officers get ready in this room, whatever that means. You "
-        "suspect that they play video games in here. An automatic door is ready "
-        "to serve you, to the west.",
+        "suspect that they play video games in here. The ship's cat, Admiral "
+        "Whiskers, is curled up on the conference table. It would be nice to "
+        "PET the KITTY. An automatic door is ready to serve you, to the west.",
         {"west": "Bright Hallway"},
     ),
     Room(
@@ -140,7 +141,7 @@ def take_turn():
         print("     west - Wheat.")
         print("       up - Rockets go in this direction.")
         print("     down - Apples fall in this direction.")
-        print("verb noun - There are two SECRET COMMANDS of this form.")
+        print("verb noun - There are three SECRET COMMANDS of this form.")
     elif player_command == "quit":
         print("Ok, but quitters never win.")
         global playing_game
@@ -162,6 +163,11 @@ def take_turn():
             working_reactor = True
         else:
             print("There's no reactor here.")
+    elif player_command == "pet kitty":
+        if current_room_name == "Ready Room":
+            print("Admiral Whiskers purrs contentedly as you scritch between her ears.")
+        else:
+            print("There's no kitty here. Aw.")
     elif player_command == "fly ship":
         if current_room_name == "Bridge":
             if working_reactor:
@@ -300,3 +306,9 @@ main()
 #     from Cliff Edge to Canyon Floor
 # * Could implement items
 # * Could implement NPCs with dialogue
+# * Admiral Whiskers is not a true NPC yet - her location and name are hardcoded.
+# * Ideas for more Admiral Whiskers behaviors:
+#   + She could randomly choose to purr, flop, snooze, stretch, etc.
+#   + She could cycle through behaviors, by adding a variable like working_reactor.
+# * Nothing special happens if you attempt to fix the reactor repeatedly.
+# * The help text mentions the number of secret commands, but can get out of sync.
